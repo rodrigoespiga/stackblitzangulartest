@@ -16,10 +16,12 @@ export class AppComponent {
         let nestingLevel = 0;
         let tabulation = "";
         let parent = x.parentNode;
+        let parentsChain = "";
         do {
           if (parent.nodeName.indexOf("APP") != -1) {
             nestingLevel++;
             tabulation += "#";
+            parentsChain = "[" + parent.nodeName + "]>>" + parentsChain;
           }
           parent = parent.parentNode;
         } while (parent != null);
@@ -30,7 +32,7 @@ export class AppComponent {
         )[0];
         let nghostAttributeName = nghostAttribute.name;
 
-        console.log(tabulation + x.nodeName + "[" + nghostAttributeName + "]");
+        console.log(parentsChain + "[" + x.nodeName + "("+ nghostAttributeName + ")]");
       }
     });
   }
