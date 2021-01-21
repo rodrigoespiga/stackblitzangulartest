@@ -9,6 +9,14 @@
 
 <app-mi-componente-chachi [renderizarSubcomponente]='true'></app-mi-componente-chachi>
 
-<app-otro-componente>
+<app-otro-componente></app-otro-componente>
+
+<!-- Cuando el app-boton produzca el evento valorRandomEventEmitter, se llamará
+al callback cambiarValorLeido con el valor emitido. La callback guarda ese valor
+en su propiedad valorLeido-->
+
+<app-boton (valorRandomEventEmitter)="cambiarValorLeido($event)"></app-boton>
+
+<h5>valor emitido por app-boton {{valorLeido}}</h5>
 
 
