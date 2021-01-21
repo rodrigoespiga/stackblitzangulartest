@@ -1,16 +1,15 @@
+<div class="card shadow-lg" style="margin:0px auto;">
+	<div class="card-body">
+		<h5 class="card-title">mi-componente-chachi</h5>
+		<h6 class="card-subtitle mb-2 text-muted">renderizarSubcomponente es </h6>
+		<p class="card-text">{{renderizarSubcomponente}}</p>
+		<div *ngIf="renderizarSubcomponente">
 
-<div style="border: 2px solid red;"> 
-  <p>
-  mi-componente-chachi works!
-  </p>
+			<app-otro-componente></app-otro-componente>
+		</div>
+		<!--
+        <a href="#" class="card-link">Card link</a>
+        -->
 
-  <h5>renderizarSubcomponente es {{renderizarSubcomponente}}</h5>
-
-  <div *ngIf="renderizarSubcomponente">
-    
-    <app-otro-componente></app-otro-componente>
-  </div>
-
-
+	</div>
 </div>
-
