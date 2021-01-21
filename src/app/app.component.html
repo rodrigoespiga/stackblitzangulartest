@@ -2,6 +2,11 @@
 	<div class="row">
 		<div class="col">
 			<hello name="{{ name }}"></hello>
+      <!-- Double binding, la propiedad size del sizer valdrá lo que la propiedad tamanoFuente de app.component,
+      y cuando se produzca un cambio en esa propiedad dentro del sizer, también cambiará tamanoFuente
+      -->
+      <app-sizer [(size)]="tamanoFuente"></app-sizer>
+      <div [style.font-size.px]="tamanoFuente">Este texto tiene font-size que depende del valor de tamanoFuente ({{tamanoFuente}}) </div>
 		</div>
 
 		<div class="col">

@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { MiComponenteChachiComponent } from './mi-componente-chachi/mi-componente-chachi.component';
 import { OtroComponenteComponent } from './otro-componente/otro-componente.component';
 import { BotonComponent } from './boton/boton.component';
+import { SizerComponent } from './sizer/sizer.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, MiComponenteChachiComponent, OtroComponenteComponent, BotonComponent ],
+  declarations: [ AppComponent, HelloComponent, MiComponenteChachiComponent, OtroComponenteComponent, BotonComponent, SizerComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
