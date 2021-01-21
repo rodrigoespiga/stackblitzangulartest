@@ -3,19 +3,16 @@ import { Component, Input } from "@angular/core";
 @Component({
   selector: "hello",
   template: `
-    <h3 class="alert alert-success">Hola {{ name }}!</h3>
-    <h5>otraCosa = {{ otraCosa }}</h5>
-    <app-mi-componente-chachi></app-mi-componente-chachi>
+    <h6 class="alert alert-info text-center mb-0">Hola {{ name }}!</h6>    
   `,
   styles: [
     `
-      h1 {
+      h6 {
         font-family: Lato;
       }
     `
   ]
 })
 export class HelloComponent {
-  @Input() name: string;
-  otraCosa = "El valor de otra cosa";
+  @Input() name: string;  
 }
