@@ -13,13 +13,29 @@ export class AppComponent {
   ngOnInit() {
     Array.from(document.querySelectorAll("*")).forEach(x => {
       if (x.nodeName.indexOf("APP") != -1) {
-        console.log(x.nodeName);
+        let nestingLevel = 0;
+        let tabulation = "";
+        let parent = x.parentNode;
+        do {
+          if (parent.nodeName.indexOf("APP") != -1) {
+            nestingLevel++;
+            tabulation += "#";
+          }
+          parent = parent.parentNode;
+        } while (parent != null);
+
+        let atributes = Array.from(x.attributes);
+        let nghostAttribute = atributes.filter(
+          atributo => atributo.name.indexOf("nghost") != -1
+        )[0];
+        let nghostAttributeName = nghostAttribute.name;
+
+        console.log(tabulation + x.nodeName + "[" + nghostAttributeName + "]");
       }
     });
   }
 
   public cambiarValorLeido(eventoRecibido) {
     this.valorLeido = eventoRecibido;
-    
   }
 }
