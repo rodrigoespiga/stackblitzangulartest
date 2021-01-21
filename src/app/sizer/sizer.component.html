@@ -1,8 +1,25 @@
-<div>
-  <button class="btn btn-success" (click)="decrementar()" title="Decrementar size y emitir evento sizeChange">-</button>
-  <button class="btn btn-danger" (click)="incrementar()" title="Incrementar size y emitir evento sizeChange">+</button>
-  <!--
+<div class="row">
+
+
+
+
+  <div class="col-12">
+    <h5>app-sizer</h5>
+  </div>
+
+	<div class="col-6">
+		<button class="btn btn-success btn-block" (click)="decrementar()" title="Decrementar size y emitir evento sizeChange">-</button>
+	</div>
+
+	<div class="col-6">
+		<button class="btn btn-danger btn-block" (click)="incrementar()" title="Incrementar size y emitir evento sizeChange">+</button>
+	</div>
+
+	<div class="col-12">
+		<!--
   <label [style.font-size.px]="size">Valor de size: {{size}}px</label>
   -->
-  <p>Valor de size: {{size}}</p>
+		<p>Valor de size: {{size}}</p>
+	</div>
+
 </div>

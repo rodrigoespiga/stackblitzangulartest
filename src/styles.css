@@ -1,2 +1,9 @@
 /* Add application styles & imports to this file! */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+.row{
+  border:4px ridge green;
+}
+
+[class*='col']{
+  border:4px ridge orange;
+}

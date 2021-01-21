@@ -3,7 +3,9 @@
 		<div class="col">
 			<hello name="{{ name }}"></hello>
       <!-- Double binding, la propiedad size del sizer valdrá lo que la propiedad tamanoFuente de app.component,
-      y cuando se produzca un cambio en esa propiedad dentro del sizer, también cambiará tamanoFuente
+      y cuando se produzca un cambio en esa propiedad dentro del sizer, también cambiará tamanoFuente.
+      Si se produce un cambio en tamanoFuente también cambiará size, que a su vez etc. etc..
+      No sé muy bien cómo controla que no produzcan bucles
       -->
       <app-sizer [(size)]="tamanoFuente"></app-sizer>
       <div [style.font-size.px]="tamanoFuente">Este texto tiene font-size que depende del valor de tamanoFuente ({{tamanoFuente}}) </div>
